@@ -170,8 +170,31 @@ article h2 {
   background-color: var(--destaque-inverso);
 }
 
+#formacao-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 15px;
+}
+
+#formacao-container .curso  {
+  background-color: var(--fundo-principal);
+  border-radius: 10px;
+  padding: 8px;
+  border-left: 4px solid var(--destaque-inverso);
+  transition: border-width 0.2s, border-color 0.2s;
+}
+
+#formacao-container .curso:hover {
+  border-left-width: 10px;
+  border-color: #0077ff;
+  cursor: pointer;
+}
+
+
+
 @media screen and (min-width: 768px) {
   #skill-container {
     grid-template-columns: 1fr 1fr;
   }
 }
+
