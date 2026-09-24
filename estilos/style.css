@@ -190,11 +190,68 @@ article h2 {
   cursor: pointer;
 }
 
+#projetos-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 15px;
+}
 
+#projetos-container .projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--fundo-principal);
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 4px solid var(--destaque-inverso);
+  transition: border-color 0.2s, border-width 0.2s;
+}
+
+#projetos-container .projeto:hover {
+  border-left-width: 10px;
+  border-color: var(--destaque);
+  cursor: pointer;
+}
+
+#projetos-container .foto {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: var(--destaque);
+  color: var(--texto-invertido);
+  text-align: center;
+  padding: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--texto-invertido);
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: var(--texto);
+}
 
 @media screen and (min-width: 768px) {
   #skill-container {
     grid-template-columns: 1fr 1fr;
+  }
+
+  #projetos-container .projeto {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  #projetos-container .foto {
+    aspect-ratio: 1/1;
+    max-width: 30%;
+    max-height: 200px;
   }
 }
 
